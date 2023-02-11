@@ -9,8 +9,7 @@ $(call inherit-product, vendor/xiaomi/libra/libra-vendor.mk)
 -include $(DEVICE_PATH)/system_prop.mk
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-lineage
+    $(DEVICE_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -48,10 +47,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/synaptics_dsx.kl:system/vendor/usr/keylayout/synaptics_dsx.kl \
     $(DEVICE_PATH)/keylayout/synaptics_dsx_edge.kl:system/vendor/usr/keylayout/synaptics_dsx_edge.kl
 
-# EdgeGesture
-PRODUCT_PACKAGES += \
-    EdgeGesture
-
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service.libra
@@ -62,10 +57,6 @@ PRODUCT_PACKAGES += \
 
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.libra
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
