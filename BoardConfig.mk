@@ -40,5 +40,8 @@ VENDOR_SECURITY_PATCH := 2018-03-01
 # Shims
 TARGET_LD_SHIM_LIBS += /system/vendor/lib/hw/camera.vendor.msm8992.so|libshim_camera.so
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/libra/BoardConfigVendor.mk

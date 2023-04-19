@@ -5,8 +5,6 @@ BOARD_PLATFORM := msm8992
 $(call inherit-product, device/xiaomi/msm8994-common/msm8994-common.mk)
 $(call inherit-product, vendor/xiaomi/libra/libra-vendor.mk)
 
-# System properties
--include $(DEVICE_PATH)/system_prop.mk
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
