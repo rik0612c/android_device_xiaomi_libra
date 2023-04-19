@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-service.libra
+    android.hardware.ir@1.0-service.xiaomi
 
 # Sensors
 PRODUCT_PACKAGES += \
