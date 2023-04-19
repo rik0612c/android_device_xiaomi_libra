@@ -115,11 +115,13 @@ void vendor_load_properties()
         property_override("ro.product.model", "Mi-4c");
         property_override("ro.product.device", "libra");
         property_override("ro.build.product", "libra");
+        property_override("bluetooth.device.default_name", "Xiaomi Mi-4c");
         break;
     case AQUA_BOARD_ID:
         property_override("ro.product.model", "MI 4S");
         property_override("ro.product.device", "aqua");
         property_override("ro.build.product", "aqua");
+        property_override("bluetooth.device.default_name", "Xiaomi MI 4S");
         break;
     }
 }
