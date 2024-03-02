@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.lineageos.settings.device"
     android:versionCode="6"
     android:versionName="2.5"
@@ -24,7 +25,8 @@
     <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
     <uses-sdk
-        android:minSdkVersion="27" />
+        android:minSdkVersion="27"
+        android:targetSdkVersion="34" />
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -62,6 +64,12 @@
                 <action android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
             </intent-filter>
         </receiver>
+        
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:replace="android:authorities"/>
+            
     </application>
 
 </manifest>
